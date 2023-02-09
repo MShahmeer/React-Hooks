@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const Todos = ({ todos, addTodo }) => {
   console.log("child render");
@@ -13,4 +13,4 @@ const Todos = ({ todos, addTodo }) => {
   );
 };
 
-export default Todos;
+export default memo(Todos);

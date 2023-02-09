@@ -1,5 +1,4 @@
-import React, { useState, useReducer, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useCallback, useReducer, useState } from "react";
 import Todos from "./Todos";
 const initialState = [];
 
@@ -9,9 +8,7 @@ const reducer = (state, action) => {
   }
   return state;
 };
-
-const UseCallBackProblem = () => {
-  const navigate = useNavigate();
+const UseCallBackProblemSolved = () => {
   const [count, setCount] = useState(0);
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -19,9 +16,9 @@ const UseCallBackProblem = () => {
     setCount(count + 1);
   };
 
-  const addTodo = () => {
+  const addTodo = useCallback(() => {
     dispatch({ type: "New_Entry" });
-  };
+  }, [state]);
   return (
     <>
       <Todos todos={state} addTodo={addTodo} />
@@ -29,14 +26,8 @@ const UseCallBackProblem = () => {
       <hr />
       Count: {count}
       <button onClick={increment}> + </button>
-      <hr />
-      <div>
-        <button onClick={() => navigate("/ProblemSolved")}>
-          Problem Solved
-        </button>
-      </div>
     </>
   );
 };
 
-export default UseCallBackProblem;
+export default UseCallBackProblemSolved;

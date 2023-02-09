@@ -7,6 +7,7 @@ import Home from "./Home";
 import UseContextHook from "./UseContextHook/UseContextHook";
 import UseReducer from "./UseReducerHook/UseReducer";
 import UseCallBackProblem from "./UseCallBackHook/UseCallBackProblem";
+import UseCallBackProblemSolved from "./UseCallBackHook/UseCallBackProblemSolved";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/useContext" element={<UseContextHook />} />
         <Route path="/useReducer" element={<UseReducer />} />
         <Route path="/useCallbackProblem" element={<UseCallBackProblem />} />
+        <Route path="/ProblemSolved" element={<UseCallBackProblemSolved />} />
       </Routes>
     </BrowserRouter>
   );
