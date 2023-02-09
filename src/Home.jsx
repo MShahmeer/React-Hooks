@@ -27,6 +27,13 @@ const Home = () => {
       >
         useReducer
       </button>
+      <button
+        onClick={() => {
+          navigate("/useCallbackProblem");
+        }}
+      >
+        useCallback
+      </button>
     </>
   );
 };

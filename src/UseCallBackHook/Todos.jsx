@@ -1,0 +1,16 @@
+import React from "react";
+
+const Todos = ({ todos, addTodo }) => {
+  console.log("child render");
+  return (
+    <>
+      <h3>My Todos</h3>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo + index}</p>;
+      })}
+      <button onClick={addTodo}>Add Todo</button>
+    </>
+  );
+};
+
+export default Todos;

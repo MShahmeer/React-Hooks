@@ -6,6 +6,7 @@ import PropDrillingProblem from "./UseContextHook/PropDrillingProblem";
 import Home from "./Home";
 import UseContextHook from "./UseContextHook/UseContextHook";
 import UseReducer from "./UseReducerHook/UseReducer";
+import UseCallBackProblem from "./UseCallBackHook/UseCallBackProblem";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/PropDrilling" element={<PropDrillingProblem />} />
         <Route path="/useContext" element={<UseContextHook />} />
         <Route path="/useReducer" element={<UseReducer />} />
+        <Route path="/useCallbackProblem" element={<UseCallBackProblem />} />
       </Routes>
     </BrowserRouter>
   );
