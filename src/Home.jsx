@@ -20,6 +20,13 @@ const Home = () => {
       >
         PropDrilling
       </button>
+      <button
+        onClick={() => {
+          navigate("/useReducer");
+        }}
+      >
+        useReducer
+      </button>
     </>
   );
 };
